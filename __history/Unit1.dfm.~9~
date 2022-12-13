@@ -1,0 +1,211 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 600
+  ClientWidth = 800
+  Color = clWindow
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PopupMenu = PopupMenu1
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Shape1: TShape
+    Left = 352
+    Top = 240
+    Width = 89
+    Height = 51
+    Align = alCustom
+    Shape = stEllipse
+  end
+  object Shape2: TShape
+    Left = 217
+    Top = 112
+    Width = 56
+    Height = 75
+    Align = alCustom
+  end
+  object Shape3: TShape
+    Left = 408
+    Top = 71
+    Width = 65
+    Height = 30
+    Align = alCustom
+  end
+  object Shape4: TShape
+    Left = 584
+    Top = 296
+    Width = 57
+    Height = 49
+    Align = alCustom
+    Shape = stRoundRect
+  end
+  object Shape5: TShape
+    Left = 241
+    Top = 389
+    Width = 95
+    Height = 60
+    Align = alCustom
+  end
+  object Shape6: TShape
+    Left = 152
+    Top = 240
+    Width = 63
+    Height = 51
+    Align = alCustom
+    Shape = stCircle
+  end
+  object Shape7: TShape
+    Left = 531
+    Top = 157
+    Width = 30
+    Height = 30
+    Align = alCustom
+    Shape = stSquare
+  end
+  object Shape8: TShape
+    Left = 443
+    Top = 424
+    Width = 78
+    Height = 57
+    Align = alCustom
+    Shape = stRoundRect
+  end
+  object Shape9: TShape
+    Left = 294
+    Top = 53
+    Width = 30
+    Height = 30
+    Align = alCustom
+    Shape = stCircle
+  end
+  object ComboBox1: TComboBox
+    Left = 191
+    Top = 8
+    Width = 145
+    Height = 21
+    AutoDropDown = True
+    Style = csDropDownList
+    TabOrder = 0
+    OnChange = ComboBox1Change
+    Items.Strings = (
+      'Red'
+      'Green'
+      'Blue'
+      'Yellow'
+      'All color'
+      'All white')
+  end
+  object CheckBox1: TCheckBox
+    Left = 24
+    Top = 8
+    Width = 161
+    Height = 17
+    Caption = #1042' '#1086#1073#1088#1072#1090#1085#1086#1084' '#1085#1072#1087#1088#1072#1074#1083#1077#1085#1080#1080
+    TabOrder = 1
+  end
+  object Edit1: TEdit
+    Left = 294
+    Top = 512
+    Width = 121
+    Height = 21
+    TabOrder = 2
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 100
+    OnTimer = Timer1Timer
+    Left = 760
+    Top = 552
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 760
+    Top = 432
+    object N1: TMenuItem
+      Caption = #1042#1086#1082#1088#1091#1075
+      OnClick = N1Click
+    end
+    object N2: TMenuItem
+      Caption = #1050#1074#1072#1076#1088#1072#1090#1086#1084
+      OnClick = N2Click
+    end
+    object N3: TMenuItem
+      Caption = #1044#1080#1072#1075#1086#1085#1072#1083#1100#1102
+      OnClick = N3Click
+    end
+    object N19: TMenuItem
+      Caption = #1054#1089#1090#1072#1085#1086#1074#1080#1090#1100' '#1076#1074#1080#1078#1077#1085#1080#1077
+      OnClick = N19Click
+    end
+    object N4: TMenuItem
+      Caption = '-'
+    end
+    object N5: TMenuItem
+      Caption = #1055#1086#1082#1072#1079#1072#1090#1100' '#1074#1089#1077' '#1092#1080#1075#1091#1088#1099
+      OnClick = N5Click
+    end
+    object N6: TMenuItem
+      Caption = #1055#1086#1082#1072#1079#1072#1090#1100' '#1090#1086#1083#1100#1082#1086'...'
+      object N7: TMenuItem
+        Caption = #1055#1088#1103#1084#1086#1091#1075#1086#1083#1100#1085#1080#1082#1080
+        OnClick = N7Click
+      end
+      object N8: TMenuItem
+        Caption = #1050#1074#1072#1076#1088#1072#1090#1099
+        OnClick = N8Click
+      end
+      object N9: TMenuItem
+        Caption = #1050#1088#1091#1075#1080
+        OnClick = N9Click
+      end
+      object N17: TMenuItem
+        Caption = #1069#1083#1083#1080#1087#1089#1099
+        OnClick = N17Click
+      end
+      object N18: TMenuItem
+        Caption = #1055#1088#1103#1084#1086#1091#1075#1086#1083#1100#1085#1080#1082#1080' '#1089' '#1079#1072#1082#1088#1091#1075#1083#1077#1085#1085#1099#1084#1080' '#1082#1088#1072#1103#1084#1080
+        OnClick = N18Click
+      end
+    end
+    object N11: TMenuItem
+      Caption = #1055#1086#1082#1072#1079#1072#1090#1100' '#1074#1089#1077', '#1082#1088#1086#1084#1077'...'
+      object N12: TMenuItem
+        Caption = #1055#1088#1103#1084#1086#1091#1075#1086#1083#1100#1085#1080#1082#1086#1074
+      end
+      object N13: TMenuItem
+        Caption = #1050#1074#1072#1076#1088#1072#1090#1086#1074
+      end
+      object N14: TMenuItem
+        Caption = #1050#1088#1091#1075#1086#1074
+      end
+      object N15: TMenuItem
+        Caption = #1069#1083#1083#1080#1087#1089#1086#1074
+      end
+      object N16: TMenuItem
+        Caption = #1055#1088#1103#1084#1086#1091#1075#1086#1083#1100#1085#1080#1082#1086#1074' '#1089' '#1079#1072#1082#1088#1091#1075#1083#1077#1085#1085#1099#1084#1080' '#1082#1088#1072#1103#1084#1080
+      end
+    end
+    object N10: TMenuItem
+      Caption = #1057#1082#1088#1099#1090#1100' '#1074#1089#1077' '#1092#1080#1075#1091#1088#1099
+      OnClick = N10Click
+    end
+  end
+  object Timer2: TTimer
+    Enabled = False
+    Interval = 10
+    OnTimer = Timer2Timer
+    Left = 760
+    Top = 512
+  end
+  object Timer3: TTimer
+    Enabled = False
+    Interval = 100
+    OnTimer = Timer3Timer
+    Left = 760
+    Top = 472
+  end
+end

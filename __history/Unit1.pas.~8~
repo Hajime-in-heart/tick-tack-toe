@@ -1,0 +1,302 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Menus;
+
+type
+  TForm1 = class(TForm)
+    Shape1: TShape;
+    Timer1: TTimer;
+    ComboBox1: TComboBox;
+    CheckBox1: TCheckBox;
+    PopupMenu1: TPopupMenu;
+    N1: TMenuItem;
+    N2: TMenuItem;
+    N3: TMenuItem;
+    Timer2: TTimer;
+    Timer3: TTimer;
+    Shape2: TShape;
+    Shape3: TShape;
+    Shape4: TShape;
+    Shape5: TShape;
+    Shape6: TShape;
+    Shape7: TShape;
+    Shape8: TShape;
+    Shape9: TShape;
+    Edit1: TEdit;
+    procedure Button5Click(Sender: TObject);
+    procedure N1Click(Sender: TObject);
+    procedure Timer1Timer(Sender: TObject);
+    procedure N2Click(Sender: TObject);
+    procedure Timer2Timer(Sender: TObject);
+    procedure N3Click(Sender: TObject);
+    procedure Timer3Timer(Sender: TObject);
+
+  private
+
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+x:real;
+    b,s:integer;
+
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.Button5Click(Sender: TObject);
+begin
+
+  //Button5Click(Self);
+
+end;
+
+
+
+
+
+
+
+
+
+
+procedure TForm1.N1Click(Sender: TObject);
+begin
+timer1.Enabled:= true;
+  timer2.Enabled:= false;
+    timer3.Enabled:= false;
+end;
+
+procedure TForm1.N2Click(Sender: TObject);
+begin
+  timer1.Enabled:= false;
+    timer2.Enabled:= true;
+      timer3.Enabled:= false;
+end;
+
+procedure TForm1.N3Click(Sender: TObject);
+begin
+
+  timer1.Enabled:= false;
+    timer2.Enabled:= false;
+      timer3.Enabled:= true;
+end;
+
+procedure TForm1.Timer1Timer(Sender: TObject);
+begin
+  x:=x+0.1;
+Shape1.Left:=385-trunc(10*cos(x));
+Shape1.Top:=225-trunc(10*sin(x));
+Shape2.Left:=217-trunc(20*cos(x));
+Shape2.Top:=103-trunc(20*sin(x));
+Shape3.Left:=408-trunc(30*cos(x));
+Shape3.Top:=71-trunc(30*sin(x));
+Shape4.Left:=586-trunc(40*cos(x));
+Shape4.Top:=271-trunc(40*sin(x));
+Shape5.Left:=241-trunc(50*cos(x));
+Shape5.Top:=367-trunc(50*sin(x));
+Shape6.Left:=185-trunc(60*cos(x));
+Shape6.Top:=231-trunc(60*sin(x));
+Shape7.Left:=523-trunc(70*cos(x));
+Shape7.Top:=127-trunc(70*sin(x));
+Shape8.Left:=443-trunc(80*cos(x));
+Shape8.Top:=413-trunc(80*sin(x));
+Shape9.Left:=289-trunc(90*cos(x));
+Shape9.Top:=23-trunc(90*sin(x));
+
+if checkbox1.checked = true  then
+begin
+Shape1.Left:=385+trunc(10*cos(x));
+Shape1.Top:=225-trunc(10*sin(x));
+Shape2.Left:=217+trunc(20*cos(x));
+Shape2.Top:=103-trunc(20*sin(x));
+Shape3.Left:=408+trunc(30*cos(x));
+Shape3.Top:=71-trunc(30*sin(x));
+Shape4.Left:=586+trunc(40*cos(x));
+Shape4.Top:=271-trunc(40*sin(x));
+Shape5.Left:=241+trunc(50*cos(x));
+Shape5.Top:=367-trunc(50*sin(x));
+Shape6.Left:=185+trunc(60*cos(x));
+Shape6.Top:=231-trunc(60*sin(x));
+Shape7.Left:=523+trunc(70*cos(x));
+Shape7.Top:=127-trunc(70*sin(x));
+Shape8.Left:=443+trunc(80*cos(x));
+Shape8.Top:=413-trunc(80*sin(x));
+Shape9.Left:=289+trunc(90*cos(x));
+Shape9.Top:=23-trunc(90*sin(x));
+end;
+
+end;
+
+
+procedure TForm1.Timer2Timer(Sender: TObject);
+begin
+s:=s+1;
+if checkbox1.checked = false then
+  begin
+ if s < 30 then
+ begin
+Shape1.Left:=385+s;
+Shape2.Left:=217+s;
+Shape3.Left:=408+s;
+Shape4.Left:=586+s;
+Shape5.Left:=241+s;
+Shape6.Left:=185+s;
+Shape7.Left:=523+s;
+Shape8.Left:=443+s;
+Shape9.Left:=289+s;
+ end;
+if (30 < s) and (s < 60) then
+ begin
+Shape1.top:=225+s;
+Shape2.top:=103+s;
+Shape3.top:=41+s;
+Shape4.top:=271+s;
+Shape5.top:=367+s;
+Shape6.top:=231+s;
+Shape7.top:=127+s;
+Shape8.top:=413+s;
+Shape9.top:=23+s;
+    end;
+    if (s > 60) and (s < 90) then
+    begin
+Shape1.Left:=475-s;
+Shape2.Left:=307-s;
+Shape3.Left:=498-s;
+Shape4.Left:=676-s;
+Shape5.Left:=331-s;
+Shape6.Left:=275-s;
+Shape7.Left:=613-s;
+Shape8.Left:=533-s;
+Shape9.Left:=379-s;
+    end;
+      if (s > 90) and (s < 120) then
+    begin
+Shape1.top:=375-s;
+Shape2.top:=253-s;
+Shape3.top:=191-s;
+Shape4.top:=421-s;
+Shape5.top:=517-s;
+Shape6.top:=381-s;
+Shape7.top:=277-s;
+Shape8.top:=563-s;
+Shape9.top:=173-s;
+    end;
+  end;
+
+      if checkbox1.Checked = true then
+      begin
+         if (s < 120) and (s > 90) then
+ begin
+Shape1.Left:=535-s;
+Shape2.Left:=217-s;
+Shape3.Left:=408-s;
+Shape4.Left:=586-s;
+Shape5.Left:=241-s;
+Shape6.Left:=185-s;
+Shape7.Left:=523-s;
+Shape8.Left:=443-s;
+Shape9.Left:=289-s;
+ end;
+if 30 > s then
+ begin
+Shape1.top:=225+s;
+Shape2.top:=103+s;
+Shape3.top:=41+s;
+Shape4.top:=271+s;
+Shape5.top:=367+s;
+Shape6.top:=231+s;
+Shape7.top:=127+s;
+Shape8.top:=413+s;
+Shape9.top:=23+s;
+    end;
+    if (s > 30) and (s < 60) then
+    begin
+Shape1.Left:=385+s;
+Shape2.Left:=307+s;
+Shape3.Left:=498+s;
+Shape4.Left:=676+s;
+Shape5.Left:=331+s;
+Shape6.Left:=275+s;
+Shape7.Left:=613+s;
+Shape8.Left:=533+s;
+Shape9.Left:=379+s;
+    end;
+      if (s < 90) and (s > 60) then
+    begin
+Shape1.top:=315-s;
+Shape2.top:=253-s;
+Shape3.top:=191-s;
+Shape4.top:=421-s;
+Shape5.top:=517-s;
+Shape6.top:=381-s;
+Shape7.top:=277-s;
+Shape8.top:=563-s;
+Shape9.top:=173-s;
+    end;
+      end;
+       if s = 120  then
+      s:=1;
+edit1.Text:= inttostr(s);
+end;
+
+procedure TForm1.Timer3Timer(Sender: TObject);
+begin
+    b:=b+1;
+    if b < 60 then
+    begin
+  Shape1.Left:=385+b;
+Shape1.Top:=261+b;
+ Shape2.Left:=217+b;
+Shape2.Top:=133+b;
+ Shape3.Left:=408+b;
+Shape3.Top:=71+b;
+ Shape4.Left:=586+b;
+Shape4.Top:=301+b;
+ Shape5.Left:=241+b;
+Shape5.Top:=397+b;
+ Shape6.Left:=185+b;
+Shape6.Top:=261+b;
+ Shape7.Left:=523+b;
+Shape7.Top:=157+b;
+ Shape8.Left:=443+b;
+Shape8.Top:=451+b;
+ Shape9.Left:=289+b;
+Shape9.Top:=53+b;
+    end;
+    if (b>60) and (b<120) then
+        begin
+  Shape1.Left:=505-b;
+Shape1.Top:=381-b;
+ Shape2.Left:=337-b;
+Shape2.Top:=253-b;
+ Shape3.Left:=528-b;
+Shape3.Top:=191-b;
+ Shape4.Left:=706-b;
+Shape4.Top:=421-b;
+ Shape5.Left:=361-b;
+Shape5.Top:=517-b;
+ Shape6.Left:=305-b;
+Shape6.Top:=381-b;
+ Shape7.Left:=643-b;
+Shape7.Top:=277-b;
+ Shape8.Left:=563-b;
+Shape8.Top:=571-b;
+ Shape9.Left:=409-b;
+Shape9.Top:=173-b;
+    end;
+if b = 120 then
+begin
+  b:=1;
+end;
+end;
+
+end.

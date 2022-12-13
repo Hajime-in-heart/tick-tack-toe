@@ -1,0 +1,923 @@
+unit Unit1;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, ImgList, pngimage, ExtCtrls, Vcl.StdCtrls, System.ImageList, jpeg;
+
+type
+  TForm1 = class(TForm)
+    Image1: TImage;
+    ImageList1: TImageList;
+    Image2: TImage;
+    Image11: TImage;
+    Button1: TButton;
+    Image3: TImage;
+    Image4: TImage;
+    Image5: TImage;
+    Image6: TImage;
+    Image7: TImage;
+    Image8: TImage;
+    Image9: TImage;
+    Image10: TImage;
+    Image12: TImage;
+    Image13: TImage;
+    Image14: TImage;
+    Image15: TImage;
+    Image16: TImage;
+    Image17: TImage;
+    Image18: TImage;
+    Image19: TImage;
+    Button2: TButton;
+    Image20: TImage;
+    Image21: TImage;
+    Image22: TImage;
+    Image23: TImage;
+    Image24: TImage;
+    Image25: TImage;
+    Image26: TImage;
+    Image27: TImage;
+    Image28: TImage;
+      procedure new_game;
+    procedure obnulenie;
+       procedure Yslovie;
+    procedure Yslovie2;
+    procedure Krestik_nolik;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormCreate(Sender: TObject);
+
+
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+
+flag,ochered:boolean;
+  i,b,c,a,d:integer;
+  Form1: TForm1;
+
+implementation
+{$R *.dfm}
+
+uses Unit2;
+
+
+
+
+procedure TForm1.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+     If Application.MessageBox('Вы точно хотите выйти из игры?','Выход из игры',MB_YESNO+MB_ICONQUESTION)=IDYES
+  then Form1.Close;
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+         flag:=True;
+  i:=1;
+  b:=0;
+  c:=0;
+end;
+  procedure TForm1.Krestik_nolik;
+var i:integer;
+begin
+if flag=false then
+repeat
+Yslovie;
+if flag=false then
+if image11.Visible = true then
+if image12.Visible = true  then
+if image22.Visible = true  then begin
+image13.Visible:= true;
+image22.Visible:= false;
+flag:=true;
+end;
+if flag=false then
+if image11.Visible = true  then
+if image21.Visible = true  then
+if image13.Visible = true  then begin
+image12.Visible:= true;
+image21.Visible:= false;
+flag:=true;
+end;
+if flag=false then
+if image20.Visible = true then
+if image12.Visible = true then
+if image13.Visible = true then begin
+image20.Visible:= false;
+image11.Visible:= true;
+flag:=true;
+end;
+if flag=false then
+if image14.Visible = true then
+if image15.Visible = true then
+if image25.Visible = true then begin
+image16.Visible:= true;
+image25.Visible:= false;
+flag:=true;
+end;
+if flag=false then
+if image23.Visible = true then
+if image24.Visible = true then
+if image16.Visible = true then begin
+image15.Visible:= true;
+image24.Visible:= false;
+flag:=true;
+end;
+if flag=false then
+if image23.Visible = true then
+if image15.Visible = true then
+if image16.Visible = true then begin
+image14.Visible:=true;
+image23.Visible:=false;
+flag:=true;
+end;
+if flag=false then
+if image17.Visible=true then
+if image18.Visible=true then
+if image28.Visible =true then begin
+image19.Visible:=true;
+image28.Visible:=false;
+flag:=true;
+end;
+if flag=false then
+if image17.Visible=true then
+if image27.Visible=true then
+if image19.Visible=true then begin
+image18.Visible:=true;
+image27.visible:=false;
+flag:=true;
+end;
+if flag=false then
+if image26.Visible=true then
+if image18.Visible=true then
+if image19.Visible=true then begin
+image17.Visible:=true;
+image26.Visible:=false;
+flag:=true;
+end;
+if flag=false then
+if image11.Visible=true then
+if image14.Visible=true then
+if image26.Visible=true then begin
+image17.Visible:=true;
+image26.Visible:=false;
+flag:=true;
+end;
+if flag=false then
+if image11.Visible=true then
+if image23.Visible = true then
+if image17.Visible = true then begin
+image14.Visible:=true;
+image23.Visible:=false;
+flag:=true;
+end;
+if flag=false then
+if image20.Visible=false then
+if image14.Visible=true then
+if image17.Visible=true then begin
+image11.Visible:=true;
+image20.Visible:=false;
+flag:=true;
+end;
+if flag=false then
+if image12.Visible=true then
+if image15.Visible=true then
+if image27.Visible=true then begin
+image18.Visible:=true;
+image27.Visible:=false;
+flag:=true;
+end;
+if flag=false then
+if image12.Visible=true then
+if image24.Visible=true then
+if image18.Visible=true then begin
+image15.Visible:=true;
+image24.Visible:=false;
+flag:=true;
+end;
+if flag=false then
+if image21.Visible=true then
+if image15.Visible=true then
+if image18.Visible=true then begin
+image12.Visible:=true;
+image21.Visible:=false;
+flag:=true;
+end;
+if flag=false then
+if image13.Visible=true then
+if image16.Visible=true then
+if image28.Visible=true then begin
+image19.Visible:=true;
+image28.Visible:=false;
+flag:=true;
+end;
+if flag=false then
+if image13.Visible=true then
+if image25.Visible=true then
+if image19.Visible=true then begin
+image16.Visible:=true;
+image25.Visible:=false;
+flag:=true;
+end;
+if flag=false then
+if image22.Visible=true then
+if image16.Visible=true then
+if image19.Visible=true then begin
+image13.Visible:=true;
+image22.Visible:=false;
+flag:=true;
+end;
+if flag=false then
+if image11.Visible=true then
+if image15.Visible=true then
+if image28.Visible=true then begin
+image28.Visible:=false;
+image19.Visible:=true;
+flag:=true;
+end;
+if flag=false then
+if image11.Visible=true then
+if image24.Visible=true then
+if image19.Visible=true then begin
+image15.Visible:=true;
+image24.Visible:=false;
+flag:=true;
+end;
+if flag=false then
+if image20.Visible=true then
+if image15.Visible=true then
+if image19.Visible=true then begin
+image11.Visible:=true;
+image20.Visible:=false;
+flag:=true;
+end;
+if flag=false then
+if image13.Visible=true then
+if image15.Visible=true then
+if image26.Visible=true then begin
+image17.Visible:=true;
+image26.Visible:=false;
+flag:=true;
+end;
+if flag=false then
+if image13.Visible=true then
+if image24.Visible=true then
+if image17.Visible=true then begin
+image15.Visible:=true;
+image24.Visible:=false;
+flag:=true;
+end;
+if flag=false then
+if image22.Visible=true then
+if image15.Visible=true then
+if image17.Visible=true then begin
+image13.Visible:=true;
+image22.Visible:=false;
+flag:=true;
+end;
+
+if flag=false then
+if image2.Visible=true then
+if image3.Visible=true then
+if image22.Visible=true then begin
+image13.Visible:=true;
+image22.Visible:=false;
+flag:=true;
+end;
+if flag=false then
+if image2.Visible=true then
+if image21.Visible=true then
+if image4.Visible=true then begin
+image12.Visible:=true;
+image21.Visible:=false;
+flag:=true;
+end;
+if flag=false then
+if image20.Visible=true then
+if image3.Visible=true then
+if image4.Visible=true then begin
+image11.Visible:=true;
+image21.Visible=false;
+flag:=true;
+end;
+if flag=false then
+if image5.Visible=true then
+if image6.Visible=true then
+if image25.Visible=true then begin
+image16.Visible:=true;
+image25.Visible:=false;
+flag:=true;
+end;
+if flag=false then
+if image5.Visible=true then
+if image24.Visible=true then
+if image7.Visible=true then begin
+image15.Visible:=true;
+image24.Visible:=false;
+flag:=true;
+end;
+if flag=false then
+if image23.Visible=true then
+if image6.Visible=true then
+if image7.Visible=true then begin
+image14.Visible:=true;
+image23.Visible:=false;
+flag:=true;
+end;
+if flag=false then
+if image8.Visible=true then
+if image9.Visible=true then
+if image28.Visible=true then begin
+image19.Visible:=true;
+image28.Visible:=false;
+flag:=true;
+end;
+if flag=false then
+if image8.Visible=true then
+if image27.Visible=true then
+if image10.Visible=true then begin
+image18.Visible:=true;
+image27.Visible:=false;
+flag:=true;
+end;
+if flag=false then
+if image26.Visible=true then
+if image9.Visible=true then
+if image10.Visible=true then begin
+image17.Visible:=true;
+image26.Visible:=false;
+flag:=true;
+end;
+if flag=false then
+if image2.Visible=true then
+if image5.Visible=true then
+if image26.Visible=true then begin
+image17.Visible:=true;
+image26.Visible:=false;
+flag:=true;
+end;
+if flag=false then
+if image2.Visible=true then
+if image23.Visible=true then
+if image8.Visible=true then begin
+image14.Visible:=true;
+image23.Visible:=false;
+flag:=true;
+end;
+if flag=false then
+if image20.Visible=true then
+if image5.Visible=true then
+if image8.Visible=true then begin
+image11.Visible:=true;
+image20.visible:=false;
+flag:=true;
+end;
+if flag=false then
+if image3.Visible=true then
+if image6.Visible=true then
+if image27.Visible=true then begin
+image18.Visible:=true;
+image27.visible:=false;
+flag:=true;
+end;
+if flag=false then
+if image3.Visible=true then
+if image24.Visible=true then
+if image9.Visible=true then begin
+image15.Visible:=true;
+image24.Visible:=false;
+flag:=true;
+end;
+if flag=false then
+if image21.Visible=true then
+if image6.Visible=true then
+if image9.Visible=true then begin
+image12.Visible:=true;
+image21.Visible:=false;
+flag:=true;
+end;
+if flag=false then
+if image4.Visible=true then
+if image7.Visible=true then
+if image28.Visible=true then begin
+image19.Visible:=true;
+image28.Visible:=false;
+flag:=true;
+end;
+if flag=false then
+if image4.Visible=true then
+if image25.Visible=true then
+if image10.Visible=true then begin
+image16.Visible:=true;
+image25.Visible:=false;
+flag:=true;
+end;
+if flag=false then
+if image22.Visible=true then
+if image7.Visible=true then
+if image10.Visible=true then begin
+image13.Visible:=true;
+image22.Visible:=false;
+flag:=true;
+end;
+if flag=false then
+if image2.Visible=true then
+if image6.Visible=true then
+if image28.Visible=true then begin
+image19.Visible:=true;
+image28.Visible:=false;
+flag:=true;
+end;
+if flag=false then
+if image2.Visible=true then
+if image6.Visible=true then
+if image28.Visible=true then begin
+image15.Visible:=true;
+image28.Visible:=false;
+flag:=true;
+end;
+if flag=false then
+if image20.Visible=true then
+if image6.Visible=true then
+if image10.Visible=true then begin
+image11.Visible:=true;
+image20.Visible:=false;
+flag:=true;
+end;
+if flag=false then
+if image4.Visible=true then
+if image6.Visible=true then
+if image26.Visible=true then begin
+image26.Visible:=false;
+image17.Visible:=true;
+flag:=true;
+end;
+if flag=false then
+if image4.Visible=true then
+if image24.Visible=true then
+if image8.Visible=true then begin
+image15.Visible:=true;
+image24.Visible:=false;
+flag:=true;
+end;
+if flag=false then
+if image21.Visible=true then
+if image6.Visible=true then
+if image8.Visible=true then begin
+image13.Visible:=true;
+image21.Visible:=false;
+flag:=true;
+end;
+
+if flag=false then
+if image20.Visible=true then begin
+a:=random(3);
+if a=1 then begin
+image20.Visible:=false;
+image11.Visible:=true;
+flag:=true;
+end;
+
+end;
+if flag=false then
+if image21.Visible=true then begin
+a:=random(3);
+if a=1 then begin
+image12.Visible:=true;
+image21.Visible:=false;
+flag:=true;
+end;
+end;
+
+if flag=false then
+if image22.Visible=true then begin
+a:=random(3);
+if a=1 then begin
+image13.Visible:=true;
+image21.Visible:=true;
+flag:=true;
+end;
+end;
+
+if flag=false then
+if image23.Visible=true then begin
+a:=random(3);
+if a=1 then begin
+image14.Visible:=true;
+image23.Visible:=true;
+flag:=true;
+end;
+end;
+
+if flag=false then
+if panel5.Caption='' then begin
+a:=random(3);
+if a=1 then begin
+panel5.Caption:='O';
+Panel5.Enabled:=false;
+flag:=true;
+end;
+end;
+
+if flag=false then
+if panel6.Caption='' then begin
+a:=random(3);
+if a=1 then begin
+panel6.Caption:='O';
+Panel6.Enabled:=false;
+flag:=true;
+end;
+end;
+
+if flag=false then
+if panel7.Caption='' then begin
+a:=random(3);
+if a=1 then begin
+panel7.Caption:='O';
+Panel7.Enabled:=false;
+flag:=true;
+end;
+end;
+
+if flag=false then
+if panel8.Caption='' then begin
+a:=random(3);
+if a=1 then begin
+panel8.Caption:='O';
+Panel8.Enabled:=false;
+flag:=true;
+end;
+end;
+
+if flag=false then
+if panel9.Caption='' then begin
+a:=random(3);
+if a=1 then begin
+panel9.Caption:='O';
+Panel9.Enabled:=false;
+flag:=true;
+end;
+end;
+Yslovie2;
+until flag=true;
+end;
+procedure TForm1.Panel2Click(Sender: TObject);
+begin
+  if i=1 then begin
+  panel2.Caption:='X';
+  flag:=false;
+  Krestik_nolik;
+  end;
+  if i=2 then begin
+  if flag then
+  begin
+  Panel2.Caption:='X';
+  flag:=false;
+  Yslovie;
+  end
+  else
+  begin
+  Panel2.Caption:='O';
+  flag:=true;
+  Yslovie2;
+  end;
+  end;
+  Panel2.Enabled:=false;
+end;
+
+procedure TForm1.Panel3Click(Sender: TObject);
+begin
+  if i=1 then begin
+  panel3.Caption:='X';
+  flag:=false;
+  Krestik_nolik;
+  flag:=false;
+  end;
+  if i=2 then begin
+  if flag then
+  begin
+  Panel3.Caption:='X';
+  flag:=false;
+  Yslovie;
+  end
+  else
+  begin
+  Panel3.Caption:='O';
+  flag:=true;
+  Yslovie2;
+  end;
+  end;
+  Panel3.Enabled:=false;
+end;
+
+procedure TForm1.Panel4Click(Sender: TObject);
+begin
+  if i=1 then begin
+  panel4.Caption:='X';
+  flag:=false;
+  Krestik_nolik;
+  end;
+  if i=2 then begin
+  if flag then
+  begin
+  Panel4.Caption:='X';
+  flag:=false;
+  Yslovie;
+  end
+  else
+  begin
+  Panel4.Caption:='O';
+  flag:=true;
+  Yslovie2;
+  end;
+  end;
+  Panel4.Enabled:=false;
+end;
+
+procedure TForm1.Panel5Click(Sender: TObject);
+begin
+  if i=1 then begin
+  panel5.Caption:='X';
+  flag:=false;
+  Krestik_nolik;
+  end;
+  if i=2 then begin
+  if flag then
+  begin
+  Panel5.Caption:='X';
+  flag:=false;
+  Yslovie;
+  end
+  else
+  begin
+  Panel5.Caption:='O';
+  flag:=true;
+  Yslovie2;
+  end;
+  end;
+  Panel5.Enabled:=false;
+end;
+
+procedure TForm1.Panel6Click(Sender: TObject);
+begin
+  if i=1 then begin
+  panel6.Caption:='X';
+  flag:=false;
+  Krestik_nolik;
+  end;
+  if i=2 then begin
+  if flag then
+  begin
+  Panel6.Caption:='X';
+  flag:=false;
+  Yslovie;
+  end
+  else
+  begin
+  Panel6.Caption:='O';
+  flag:=true;
+  Yslovie2;
+  end;
+  end;
+  Panel6.Enabled:=false;
+end;
+
+procedure TForm1.Panel7Click(Sender: TObject);
+begin
+  if i=1 then begin
+  panel7.Caption:='X';
+  flag:=false;
+  Krestik_nolik;
+  end;
+  if i=2 then begin
+  if flag then
+  begin
+  Panel7.Caption:='X';
+  flag:=false;
+  Yslovie;
+  end
+  else
+  begin
+  Panel7.Caption:='O';
+  flag:=true;
+  Yslovie2;
+  end;
+  end;
+  Panel7.Enabled:=false;
+end;
+
+procedure TForm1.Panel8Click(Sender: TObject);
+begin
+  if i=1 then begin
+  panel8.Caption:='X';
+  flag:=false;
+  Krestik_nolik;
+  end;
+  if i=2 then begin
+  if flag then
+  begin
+  Panel8.Caption:='X';
+  flag:=false;
+  Yslovie;
+  end
+  else
+  begin
+  Panel8.Caption:='O';
+  flag:=true;
+  Yslovie2;
+  end;
+  end;
+  Panel8.Enabled:=false;
+end;
+
+procedure TForm1.Panel9Click(Sender: TObject);
+begin
+  if i=1 then begin
+  panel9.Caption:='X';
+  flag:=false;
+  Krestik_nolik;
+  end;
+  if i=2 then begin
+  if flag then
+  begin
+  Panel9.Caption:='X';
+  flag:=false;
+  Yslovie;
+  end
+  else
+  begin
+  Panel9.Caption:='O';
+  flag:=true;
+  Yslovie2;
+  end;
+  end;
+  Panel9.Enabled:=false;
+end;
+
+
+
+procedure TForm1.Yslovie;
+begin
+  If ((Panel1.Caption='X') and (Panel2.Caption='X') and (Panel3.Caption='X')) or
+     ((Panel4.Caption='X') and (Panel5.Caption='X') and (Panel6.Caption='X')) or
+     ((Panel7.Caption='X') and (Panel8.Caption='X') and (Panel9.Caption='X')) or
+     ((Panel1.Caption='X') and (Panel4.Caption='X') and (Panel7.Caption='X')) or
+     ((Panel2.Caption='X') and (Panel5.Caption='X') and (Panel8.Caption='X')) or
+     ((Panel3.Caption='X') and (Panel6.Caption='X') and (Panel9.Caption='X')) or
+     ((Panel1.Caption='X') and (Panel5.Caption='X') and (Panel9.Caption='X')) or
+     ((Panel3.Caption='X') and (Panel5.Caption='X') and (Panel7.Caption='X')) then
+     begin
+     If i=1 then begin
+     Form2.Show;
+     Form2.Label1.Caption:='Вы выиграли!';
+     ochered:=false;
+     end;
+     if i=2 then begin
+     Form2.Show;
+     Form2.Label1.Caption:='Игрок 1 выиграл!';
+     end;
+     b:=b+1;
+     flag:=true;
+     end;
+end;
+
+procedure TForm1.Yslovie2;
+begin
+  if ((Panel1.Caption='O') and (Panel2.Caption='O') and (Panel3.Caption='O')) or
+     ((Panel4.Caption='O') and (Panel5.Caption='O') and (Panel6.Caption='O')) or
+     ((Panel7.Caption='O') and (Panel8.Caption='O') and (Panel9.Caption='O')) or
+     ((Panel1.Caption='O') and (Panel4.Caption='O') and (Panel7.Caption='O')) or
+     ((Panel2.Caption='O') and (Panel5.Caption='O') and (Panel8.Caption='O')) or
+     ((Panel3.Caption='O') and (Panel6.Caption='O') and (Panel9.Caption='O')) or
+     ((Panel1.Caption='O') and (Panel5.Caption='O') and (Panel9.Caption='O')) or
+     ((Panel3.Caption='O') and (Panel5.Caption='O') and (Panel7.Caption='O')) then
+     begin
+     if i=1 then begin
+     Form2.Show;
+     Form2.Label1.Caption:='Вы проиграли';
+     ochered:=true;
+     end;
+     if i=2 then begin
+     Form2.Show;
+     Form2.Label1.Caption:='Игрок 2 выиграл!';
+     end;
+     c:=c+1;
+     flag:=true;
+     end
+     else begin
+     if panel1.Caption<>'' then
+     if panel2.Caption<>'' then
+     if panel3.Caption<>'' then
+     if panel4.Caption<>'' then
+     if panel5.Caption<>'' then
+     if panel6.Caption<>'' then
+     if panel7.Caption<>'' then
+     if panel8.Caption<>'' then
+     if panel9.Caption<>'' then
+     begin
+     Form2.Show;
+     Form2.Label1.Caption:='Ничья';
+     flag:=true;
+     d:=1+random(2);
+     case d of
+     1:ochered:=true;
+     2:ochered:=false;
+     end;
+     end;
+     end;
+end;
+
+procedure TForm1.N4Click(Sender: TObject);
+begin
+  i:=1;
+  b:=0;
+  c:=0;
+  Form1.label2.Caption:='0 : 0';
+  obnulenie;
+end;
+
+
+
+procedure TForm1.new_game;
+var x,i:integer;
+begin
+  if ochered=true then begin
+  if i=1 then
+  A:=random(2);
+  if a=1 then begin
+  x:=random(10);
+  if x=1 then begin
+  panel1.Caption:='O';
+  panel1.Enabled:=false;
+  end;
+  if x=2 then begin
+  panel2.Caption:='O';
+  panel2.Enabled:=false;
+  end;
+  if x=3 then begin
+  panel3.Caption:='O';
+  panel3.Enabled:=false;
+  end;
+  if x=4 then begin
+  panel4.Caption:='O';
+  panel4.Enabled:=false;
+  end;
+  if x=5 then begin
+  panel5.Caption:='O';
+  panel5.Enabled:=false;
+  end;
+  if x=6 then begin
+  panel6.Caption:='O';
+  panel6.Enabled:=false;
+  end;
+  if x=7 then begin
+  panel7.Caption:='O';
+  panel7.Enabled:=false;
+  end;
+  if x=8 then begin
+  panel8.Caption:='O';
+  panel8.Enabled:=false;
+  end;
+  if x=9 then begin
+  panel9.Caption:='O';
+  panel9.Enabled:=false;
+  end;
+  end;
+end;
+end;
+
+procedure TForm1.obnulenie;
+begin
+image2.Visible:=false;
+image3.Visible:=false;
+image4.Visible:=false;
+image5.Visible:=false;
+image6.Visible:=false;
+image7.Visible:=false;
+image8.Visible:=false;
+image9.Visible:=false;
+image10.Visible:=false;
+image11.Visible:=false;
+image12.Visible:=false;
+image13.Visible:=false;
+image14.Visible:=false;
+image15.Visible:=false;
+image16.Visible:=false;
+image17.Visible:=false;
+image18.Visible:=false;
+image19.Visible:=false;
+image20.Visible:=true;
+image21.Visible:=true;
+image22.Visible:=true;
+image23.Visible:=true;
+image24.Visible:=true;
+image25.Visible:=true;
+image26.Visible:=true;
+image27.Visible:=true;
+image28.Visible:=true;
+end;
+end.
