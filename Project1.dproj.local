@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899 12 30 00:00:00.000.047,=C:\Users\Dar1K\Desktop\4\Unit5.pas</Transaction>
+    <Transaction>1899 12 30 00:00:00.000.521,=C:\Users\Dar1K\Desktop\4\Unit3.pas</Transaction>
+    <Transaction>1899 12 30 00:00:00.000.303,C:\Users\Dar1K\Desktop\4\Unit3.pas=</Transaction>
+    <Transaction>1899 12 30 00:00:00.000.462,=C:\Users\Dar1K\Desktop\4\Unit6.pas</Transaction>
+    <Transaction>1899 12 30 00:00:00.000.758,=C:\Users\Dar1K\Desktop\4\Unit6.pas</Transaction>
+    <Transaction>1899 12 30 00:00:00.000.585,=C:\Users\Dar1K\Desktop\4\Unit2.pas</Transaction>
+    <Transaction>1899 12 30 00:00:00.000.dfm,C:\Users\Student15\Documents\RAD Studio\Projects\Unit1.dfm=E:\Колледж\2 курс\Основы алгоритмизации программирования\Создание игровых приложений\4\Unit1.dfm</Transaction>
+    <Transaction>1899 12 30 00:00:00.000.699,=C:\Users\Dar1K\Desktop\4\Unit4.pas</Transaction>
+    <Transaction>1899 12 30 00:00:00.000.dproj,C:\Users\Student15\Documents\RAD Studio\Projects\Project1.dproj=E:\Колледж\2 курс\Основы алгоритмизации программирования\Создание игровых приложений\4\Project1.dproj</Transaction>
+    <Transaction>1899 12 30 00:00:00.000.pas,C:\Users\Student15\Documents\RAD Studio\Projects\Unit1.pas=E:\Колледж\2 курс\Основы алгоритмизации программирования\Создание игровых приложений\4\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>
